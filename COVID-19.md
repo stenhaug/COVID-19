@@ -19,4 +19,4 @@ Positive test rate, total positives by state
 
 # Graphs - By state
 
-<img src="COVID-19_files/figure-gfm/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-3.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-4.png" width="672" style="display: block; margin: auto;" />
+<img src="COVID-19_files/figure-gfm/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-3.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-4.png" width="672" style="display: block; margin: auto;" /><img src="COVID-19_files/figure-gfm/unnamed-chunk-6-5.png" width="672" style="display: block; margin: auto;" />
