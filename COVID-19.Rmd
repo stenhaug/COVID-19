@@ -10,6 +10,16 @@ library(lubridate)
 library(ggrepel)
 library(cowplot)
 theme_set(theme_minimal_hgrid())
+
+knitr::opts_chunk$set(
+    fig.align='center',
+    echo=FALSE,
+    warning=TRUE,
+    fig.pos='H',
+    fig.retina = 10,
+    warning = FALSE,
+    message = FALSE
+)
 ```
 
 # Prepare data
@@ -96,8 +106,9 @@ data %>%
 	labs(
 		x = "Positive test rate",
 		y = "Positives (per 100,000 residents)",
-		subtitle = "Positive test rate, total positives by state"
-	)
+		title = "Positive test rate, total positives by state"
+	) +
+	theme(plot.title = element_text(color = "#dd4b39"))
 ```
 
 ```{r}
@@ -107,18 +118,22 @@ data %>%
 	geom_point(size = 0.5, aes(alpha = new_test_per)) +
 	geom_path(alpha = 0.1) +
 	facet_wrap(~ state) +
-	scale_alpha_continuous(breaks = c(10, 30, 50)) +
+	scale_alpha_continuous(trans = "log10") +
 	scale_y_continuous(labels = scales::percent, breaks = c(0, 0.5, 1)) +
 	scale_x_date(date_breaks = "1 week", date_labels = "%m/%d") +
 	labs(
 		x = "Date", 
 		y = "Positive test rate", 
 		alpha = "New tests per 100,000 residents",
-		title = "Daily positive test rate by state",
-		subtitle = "States ordered by total cases"
+		title = "Daily positive test rate by state"
 	) +
 	theme_classic(base_size = 6) +
-	theme(legend.position = "bottom")
+	theme(
+		legend.position = "bottom", 
+		plot.title = element_text(color = "#dd4b39", size = 12),
+		axis.title.x = element_text(size = 10),
+		axis.title.y = element_text(size = 10)
+	) 
 ```
 
 # Graphs - By state
